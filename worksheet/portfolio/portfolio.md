@@ -53,6 +53,6 @@ Write code in `main()` to create Point, Line, Triangle structures and to test th
 - a point (1,1) is not part of the previous triangle (false/0) 
 - a point (2,2) is part of the line (3,2),(2,2) (true/1)
 
-# Submission to Gradescope
+## Submission to Gradescope
 
 The only file you neeed to submit is `shapes.c`
