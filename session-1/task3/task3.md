@@ -29,11 +29,20 @@ Why do we need to:
 
 ## Extension task
 
-Implement a function `rotate90()` that returns a new `Rectangle` structure
+### Implement a function `rotate90()` 
+- that returns a new `Rectangle` structure
 rotated by 90 degrees clockwise, about the `Point p` at the bottom left corner.
+
+`Rectangle rotate90( Rectangle r );`
 
 Design tests for this function
 - start with simple cases such as a Rectangle defined at the origin (0,0)
 - consider cases where width and height are different
 - consider cases where the Point P(x,y) is not at the origin
 - rotate 4 times and verify the same Rectangle is returned
+
+### Implement a function `corners()`
+- that returns an array of 4 Point stuctures that define the Rectangle corners. 
+- you will need to use `malloc()` and include `<stdlib.h>`
+
+`Point *corners( Rectangle r );`

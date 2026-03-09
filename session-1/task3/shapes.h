@@ -8,8 +8,16 @@ typedef struct _point {
 
 // define the Rectangle structure here
 
-// typedef struct ... 
+typedef struct _rectangle {
+    // fields
+} Rectangle;
 
-// state function headers here
+// function headers - implement in shapes.c
 
-float distance( Point p, Point q );
+Rectangle makeRectangle( Point p, float width, float height );
+float area( Rectangle r );
+void shiftRectangle( Rectangle *r, Point dp );
+void scaleRectangle( Rectangle *r, float scale );
+
+//Point *corners( Rectangle r );
+//Rectangle rotate90( Rectangle r );

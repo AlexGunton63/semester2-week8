@@ -1,35 +1,5 @@
 # Activity 4: PGM Image Tools with Structures
 
-## Learning Objectives
-
-After completing this activity, you should be able to:
-- Apply structures to complex real-world applications
-- Use structures to encapsulate related data
-- Design functions that operate on structure parameters
-- Manage memory for structures with dynamic arrays
-- Refactor existing code to improve its organisation and maintainability
-
-## Background
-
-PGM (Portable Gray Map) is a simple image format that stores grayscale images in a plain text format. The PGM format includes:
-- A magic number "P2" indicating the file type
-- Width and height dimensions
-- Maximum gray value (typically 255)
-- A grid of pixel values representing the image
-
-The current implementation of the PGM image tools passes separate parameters for width, height, and pixel arrays. This approach becomes unwieldy as the number of parameters grows. Using a structure to encapsulate all the image data will greatly improve code organisation and readability.
-
-## Setting Up Your Environment
-
-In GitHub Codespaces, you may find it helpful to install a PGM viewer extension to visualise your images:
-
-1. Click on the Extensions icon in the sidebar (or press Ctrl+Shift+X)
-2. Search for "PBM Viewer" (this supports PBM, PGM, and PPM formats)
-3. Install the extension
-4. After installation, you can right-click on any .pgm file and select "Open with PBM Viewer"
-
-This will allow you to see the actual images instead of just the raw text data, making it easier to verify your implementations work correctly.
-
 ## The Task
 
 Your task is to refactor the previous `pgm_tools.c` file by:
@@ -39,13 +9,17 @@ Your task is to refactor the previous `pgm_tools.c` file by:
    - Maximum gray value
    - 2D array of pixel values
 
-2. Refactoring the following functions to use the `PGMImage` structure:
+2. Define a header file `pgm_tools.h` containing
+   - structure definition
+   - function prototypes
+
+3. Refactoring the following functions to use the `PGMImage` structure:
    - `readPGMImage()`
    - `invertImage()`
    - `rotateImage()`
    - `savePGMImage()`
 
-3. Testing your implementation with the previous PGM files
+3. Testing your implementation with the included PGM files: `hat.pgm`, `frog.pgm`
 
 ## Hints and Tips
 
@@ -110,6 +84,17 @@ Your task is to refactor the previous `pgm_tools.c` file by:
        return NULL;
    }
    ```
+
+## Setting Up Your Environment
+
+In GitHub Codespaces, you may find it helpful to install a PGM viewer extension to visualise your images:
+
+1. Click on the Extensions icon in the sidebar (or press Ctrl+Shift+X)
+2. Search for "PBM Viewer" (this supports PBM, PGM, and PPM formats)
+3. Install the extension
+4. After installation, you can right-click on any .pgm file and select "Open with PBM Viewer"
+
+This will allow you to see the actual images instead of just the raw text data, making it easier to verify your implementations work correctly.
 
 ## The Benefits of Refactoring
 
