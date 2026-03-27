@@ -1,9 +1,11 @@
 
 #include <stdbool.h>
 #include <math.h>
-
 #include "shapes.h"
 
+float abs(float x) {
+    return x < 0 ? -x : x;
+}
  Point makePoint(float x, float y) {
     Point new;
     // implementation
